@@ -17,3 +17,6 @@ console.log("Produto: " + nome + "Categoria: " + categoria)
 
 console.log("Produto: " + nome 
             + "Categoria: " + categoria)
+
+// redondear a dos cifras
+console.log(10.34567.toFixed(2))
