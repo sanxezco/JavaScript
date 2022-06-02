@@ -1,0 +1,2 @@
+Para instalar las dependencias de nodejs y crea los ficheros package.json y package-lock.json
+-escribir en el terminal: npm i lodash
