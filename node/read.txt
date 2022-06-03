@@ -6,3 +6,17 @@ npm i -g nombreDeLaBiblioteca
 
 - para importar un modulo que esta fuera de la carpeta donde estamos trabajando se usan los siguientes comandos:
 const {nombreDelModulo} = require ('../../nombreDeLaCarpeta/nombreDelModulo') 
+
+- para crear un paquete de nodejs (package.json):
+    -atraves del terminal accesar a la carpeta donde  se quiere crear el paquete
+    -npm init
+    -responder a las preguntas
+    -confirmar o no la creacion del fichero package.json (yes/no)
+
+-la otra forma mas corta:
+    npm init -y
+
+Una vez creado el paquete, si se quiere instalar y guardar una dependencia:
+    npm i --save nombreDeLaDependencia
+
+    ex: instalar las dependencias de la biblioteca axios --> npm i --save axios
