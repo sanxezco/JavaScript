@@ -1,0 +1,21 @@
+1. Accesar a la carpeta interna del proyecto donde se quiere crear el archivo
+
+2. Crear 'package.json' usando el comando 'npm init -y'
+
+3. Instalar y salvar la version de Express que se quiere usar: 
+    npm i --save express@4.16.2 -E
+    (esta accion va a crear el archivo 'package-lock.json' y la carpeta 'node_modules')
+
+4. Modificar el archivo package.json
+    - cambiar la ruta de la aplicacion principal
+      "main": "src/servidor.js",
+    - adicionar el comando para instalar nodemon
+      "scripts": {
+        "start": "nodemon"
+      }
+    - Instalar nodemon (global)
+        npm i --save nodemon
+      ó Instalar nodemon (solamente en el proyecto)
+        npm i --save-dev nodemon@1.14.11 -E  
+
+5. Ejecutar el comando 'npm start'
