@@ -18,4 +18,8 @@
       ó Instalar nodemon (solamente en el proyecto)
         npm i --save-dev nodemon@1.14.11 -E  
 
-5. Ejecutar el comando 'npm start'
+5. Instalar dependencias de 'body-parse'
+    npm i --save body-parser
+
+6. Ejecutar el comando 'npm start'
+
