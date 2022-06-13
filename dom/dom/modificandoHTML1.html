@@ -9,7 +9,44 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        //creando elemento body
+        const body = document.querySelector('body') 
+
+        //creando primer elemento div
+        const div1 = document.createElement('div')
+        div1.classList.add('desataque') // adicionando classe ao elemento
+        div1.innerHTML = 'Primeiro' // adicionando conteúdo ao elemento
+
+        //creando segundo elemento div
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor') 
+        div2.innerHTML = 'Segundo' 
+
+        // creando terceiro elemento div que contiene un parrafo
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        const div3 = document.createElement('div')
+        div3.appendChild(p) // adicionando parrafo ao elemento div3
+
+        // adicionando elementos ao body
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+
+        // insertando un elemento texto antes de un elemento
+        const texto = document.createTextNode('Texto antes del primer elemento')
+        div3.insertBefore(texto, div3.firstChild) // estos dos son equivalentes
+        div3.insertBefore(texto, div3.childNodes[0])
+
+        // clonando un elemento
+        const div4 = div3.cloneNode(true)
+        body.appendChild(div4)
+        
+        // removendo un elemento
+        body.removeChild(div3)
+
+
     </script>
 </body>
 
