@@ -15,7 +15,12 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+        const img = document.querySelector('img')
+        const classes = document.querySelector('div').classList
+        classes.add('destaque')
+        classes.toggle('destaque') // alterna entre destaque e não destaque
+        const c = classes.length // quantos elementos tem na lista
+        console.log(c)
     </script>
 </body>
 
