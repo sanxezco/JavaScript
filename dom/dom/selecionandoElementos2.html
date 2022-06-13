@@ -8,9 +8,33 @@
 <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
-    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <div class="terceiro ultimo">
+        <span wb-attrib>.terceiro .ultimo</span>
+    </div>
     <script>              
-        // ...
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        const selecionar = seletor => 
+            document.querySelectorAll(seletor)
+                .forEach(e => e.classList.add('destaque'))
+
+        const deselecionar = seletor =>
+            document.querySelectorAll(seletor)
+                .forEach(e => e.classList.remove('destaque'))
+        
+        selecionar('div') // Seleciona todos os divs
+        deselecionar('*') // deseleciona todos os elementos
+
+        selecionar(':not(#primeiro') // Seleciona todos os elementos que não são o primeiro
+        deselecionar('*')
+
+        selecionar(':nth-child(1)') // Seleciona o primeiro elemento (primeiro filho) de cada elemento
+        deselecionar('*')
+
+        selecionar('div:nth-of-type(1)') // Seleciona o primeiro elemento (primeiro filho) de tipo div
+        deselecionar('*')
+
+        selecionar('[wb-attrib]') // Seleciona todos os elementos que possuem atributo wb-attrib
     </script>
 </body>
 </html>
