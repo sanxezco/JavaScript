@@ -49,6 +49,51 @@
     </form>
 
     <script>
-        // ...
+        // seleccionando elementos por el identificador
+        $('#feira').addClass('destaque')
+        $('#feira').removeClass('destaque')
+
+        // seleccionando elementos dentro de la lista
+        $('li').addClass('destaque')
+        $('li').removeClass('destaque')
+
+        // seleccionando elementos por el nombre de atributo
+        $('[wm-obrigatorio]').addClass('destaque')
+        $('[wm-obrigatorio]').removeClass('destaque')
+
+        // seleccionando elementos dentro de la lista que tiene la clase opcional
+        $('li.opcional').addClass('destaque')
+
+        // seleccionando elemento dentro de una div que contiene un p y dentro contiene un span
+        $('div p span').addClass('destaque')
+
+        // excluisvos de JQuery
+
+        // selecciona el primer elemento de la lista
+        $('li:first').css('border','solid 3px yellow')
+
+        // selecciona todos los elementos dentro de la lista con index impar
+        $('li:odd').css('border','solid 3px blue')
+
+        // seleccionado elementos del formulario
+
+        // ocultando todos los elementos del formulario
+        $('form *').hide()
+
+        // mostrando el cuadro de texto
+        $('form :text').show()
+
+        // mostrando el cuadro de password
+        $('form :password').show()
+
+        // mostrando el cuadro de checkbox
+        $('form :checkbox').show()
+
+        // mostrando el cuadro de radio
+        $('form :radio').show()
+
+        // mostrando el cuadro de archivo
+        $('form :file').show()
+        
     </script>
 </body>

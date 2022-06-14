@@ -81,6 +81,24 @@
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        const comBorda = {'border': 'solid 8px orange'}
+        const semBorda = {'border': 'none'}
+        //const mouse = {'cursor': 'pointer'}
+
+        $('a[href="#link3"]').parent().css(comBorda)
+
+        $('li:last').css(comBorda)
+
+        $('a[href="#link2"]').parent().next().css(semBorda)
+
+        $('body').find('a[href="#link4"]').parent().css(semBorda)
+
+        // para cada uno de los elementos que tenga el Body, poner cada elemento con borde
+        $('main').children().each((i,e) => $(e).css(comBorda))
+
+        // para cada uno de los elementos que tenga la lista, poner cada elemento con borde
+        $('li').each((i,e) => {
+            $(e).css(comBorda)
+        })
     </script>
 </body>
