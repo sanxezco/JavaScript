@@ -21,11 +21,21 @@
 <body class='conteudo exercicio'>
     <h1>Eventos #03</h1>
     <div id='div1'>1</div>
-    <div id='div2'>1</div>
+    <div id='div2'>2</div>
     <input id='input1' type='text' placeholder='Digite Algo!'>
     <span id='resultado'></span>
 
     <script>
-        // ...
+        function exibirDadosEventos(e){
+            $('#resultado').empty()
+            const div1 = $('<div>')
+            const div2 = $('<div>')
+            $('#resultado').append(div1, div2)
+            div1.append(`target: ${e.target.id}`)
+        }
+
+        $('#div1, #div2').on('mouseenter mouseleave', exibirDadosEventos)
+        $('input').keyup(exibirDadosEventos)
+
     </script>
 </body>
